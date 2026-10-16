@@ -1,23 +1,44 @@
 <html>
   <style>
-    a {
-	color: red;
+    body {
+	overflow: hidden;
+	margin: 0;
     }
-    img {
-	width: 100px;
+    #container {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
     }
-    .upside-down {
-	transform: rotate(180deg);
+    #container * {
+	flex-grow: 1;
+	border: none;
     }
-    #picture-two {
-	border: 5px solid red;
-    }
-    </style>
+  </style>
   <body>
-    this is rory's page<br>
-    <a href="fin.html">go and see fin's page</a><br>
-    <img class="upside-down" src="../fin/download.webp">
-    <img id="picture-two" class="upside-down" src="../fin/download.webp">
-    <img src="../fin/download.webp">
+    <div id="container"></div>
   </body>
 </html>
+
+<script>
+  const links = [
+      'hogwild.uk',
+      'seasoning.live',
+      'harmonicon.co.uk',
+      'wiki.hogwild.uk',
+      'rory.hogwild.uk',
+      'hogwild.uk/mealdeal',
+      'hogwild.uk/hog-fishing',
+      'hogwild.uk/newno',
+      'hogwild.uk/notoalgorithms',
+      'otalaband.com',
+      'valve.hogwild.uk',
+      'tyoc.hogwild.uk'
+  ];
+  const container = document.getElementById('container');
+  for (link of links){
+      const frame = document.createElement('iframe');
+      frame.src = 'https://' + link;
+      container.appendChild(frame);
+  }
+</script>

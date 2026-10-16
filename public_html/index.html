@@ -1,5 +1,40 @@
 <html>
+  <style>
+    :root {
+	--fin-pink: #c9615d;
+	--john-red: #bc3218;
+	--john-beige: #f6ebd4
+    }
+    .container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	gap: 1rem;
+    }
+    a {
+	padding: 0.1rem 0.5rem;
+	text-decoration: none;
+    }
+    .fin-link {
+	background-color: var(--fin-pink);
+	color: white;
+	font-family: Papyrus;
+    }
+    .john-link {	
+	background-color: var(--john-red);
+	color: var(--john-beige);
+	font-family: Impact;
+    }
+    .rory-link {
+	background-color: black;
+	color: white;
+    }
+    </style>
   <body>
-    home of the core den
+    <div class="container">
+      <a class="fin-link" href="fin">fin's page</a><a class="john-link" href="john">johnny's page</a><a class="rory-link" href="rory">rory's page</a>
+      </div>
   </body>
 </html>
