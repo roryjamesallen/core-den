@@ -1,13 +1,83 @@
 <html>
 <head>
-	<link rel="stylesheet" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Fin's Page</title>
+	
+<style type="text/css">
+	img{width: 600px;}
+	
+	#image_wrap {
+		position: relative;
+		left: 500
+	}
+	
+#image_wrap canvas {
+	position: absolute;
+	left: 550px;
+	top: -60px;
+	background-color: white;
+	z-index: 1;
+}
+
+#image_wrap img {
+	position: relative;
+	z-index: 50;
+	Right: -400;
+	
+}
+</style>
+
+	
 </head>
   <body>
-    this is fin's page 
-	<brk>
-	<p class="center">hello rory</p>
-	
-    <a href="rory.html">go and see rory's page</a>
-<img src="face.jpg">
+  <div id="image_wrap" style="position: relative">
+    <noscript>
+      <!-- Version with normal eyes -->
+        
+      <img src="face.jpg" />
+    </noscript>
+    <!-- Transparent and canvas are hidden by default-->
+      <a href="books.html">
+    <img src="face.png" style="display: none" id="noeyes" />
+    <canvas id="canvas" width="600" height="150" style="display: none"></canvas>
+      </a>
+</div>
+      <script type="text/javascript">
+// Set the config
+const eye = {
+  // limits of movement
+  limMin: 0.0,
+  limMax: 1.1,
+
+  // Left eye position
+  leye_left: 290,
+  leye_top: 86,
+  leye_radius: 20,
+  leye_iris: 11,
+  leye_pupil: 5,  
+
+  // Right eye position
+  reye_left: 57,
+  reye_top: 80,
+  reye_radius: 20,
+  reye_iris: 11,
+  reye_pupil: 5,
+
+  pupil_colour: "black",
+  iris_colour: "#ff6699",
+
+  // Set bounds on how far away the mouse is
+  // considered to be
+  //
+  // If your eye holes aren't perfectly round, you may
+  // need to adjust these to prevent one of the irises
+  // rolling out of view
+  //
+  // These are are all relative to the image
+  max_up: 140,
+  max_down: 20
+};
+</script>
+    <script type="text/javascript" src="https://projectsstatic.bentasker.co.uk/MISC/animating_eyes/eyes.js"></script>
   </body>
 </html>
