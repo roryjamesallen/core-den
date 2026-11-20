@@ -1,7 +1,163 @@
 <html>
-
+<head>
+<style type="text/css">
+{
+box-sizing: border-box;
+}
+.container {
+display: flex;
+flex-wrap: wrap;
+align-items: flex-end;
+background-color: #b94c00;
+margin: 10px;
+outline-style: solid;
+outline-width: 11px;
+outline-color: #863200;
+}
+.band {
+display: flex;
+background-color: gold;
+height: 3px;
+padding: 7px;
+}
+.band-lying {
+display: flex;
+background-color: gold;
+width:3px;
+padding:7px;
+}
+.book-lying {
+display:flex;
+flex-direction: row-reverse;
+color: white;
+margin: 3px;
+height: 100px;
+width: 360px;
+}
+.book {
+display: flex;
+color: white;
+margin: 3px;
+height: 400px;
+text-align: center;
+width: 100px;
+position: relative;
+display: inline-block;
+border-bottom: 1px dotted black;
+cursor: pointer;
+}
+.book-short {
+display: flex;
+color: white;
+margin: 3px;
+height: 376px;
+text-align: center;
+width: 100px;
+position: relative;
+display: inline-block;
+border-bottom: 1px dotted black;
+cursor: pointer;
+}
+.book-wide {
+display: flex;
+color: white;
+margin: 3px;
+height: 387px;
+text-align: center;
+width: 150px;
+position: relative;
+display: inline-block;
+border-bottom: 1px dotted black;
+cursor: pointer;
+}
+.tooltip {
+position: relative;
+display: inline-block;
+border-bottom: 1px dotted black;
+cursor: pointer;
+}
+.tooltiptext {
+visibility: hidden;
+width: 120px;
+color; #fff;
+text-align: center;
+border-radius: 10px;
+padding: 5px 0;
+z-index: -10;
+top: 150%;
+left: 50%
+margin-left: -60%;
+}
+.tooltiptext::after {
+content: "";
+display: flex;
+position: absolute;
+bottom: 100%;
+left: 50%;
+margin-left: -5px;
+border-width: 5px;
+border-style: solid;
+border-color: transparent transparent black transparent;
+z-index 2;
+}
+.book:hover .tooltiptext {
+visibility: visible;
+}
+.book-short:hover .tooltiptext {
+visibility: visible;
+}
+.book-wide:hover .tooltiptext {
+visibility: visible;
+}
+</style>
+</head>
 <body>
-<p> Hello </p>
-</body>
-
+<div class="container">
+	<div class="book-lying" style="background-color:red">
+		<div style="flex-wrap:wrap; text-align: center; writing-mode: vertical-rl; direction:ltr;"><h2>If on a winter's night a traveller</h2>
+		<div class="band-lying"></div>
+		<div style="flex-wrap:wrap; text-align: center; writing-mode: vertical-rl;"><h2>Italo Calvino</h2>
+			</div>
+		</div>
+	</div>
+	<div class="book" style="background-color:red">
+		<div style="flex-wrap: wrap; text-align: center"><h2>Voyage of the Dawn Treader</h2>
+		<div class="band"></div>
+		<div style="flex-wrap:wrap; text-align:center"><h2>C.S. Lewis</h2>
+		<span class="tooltiptext">This was 223 pages, took me 2 hours 10 minutes to read (102.90 pages/hr), I would rate it 3 stars </span>
+			</div>
+		</div>
+	</div>
+	<div class="book" style="background-color:purple">
+		<div style="flex-wrap: wrap; text-align: center"><h2>Prince Caspian</h2>
+		<div class="band"></div>
+		<div style="flex-wrap:wrap; text-align:center"><h2>C.S. Lewis</h2>
+		<span class="tooltiptext">This was 208 pages, took me 1 hour 58 minutes to read (105.1 pages/hr), I would rate it 3.5 stars </span>
+			</div>
+		</div>
+	</div>
+	<div class="book" style="background-color:purple">
+		<div style="flex-wrap: wrap; text-align: center"><h2>Black like me</h2>
+		<div class="band"></div>
+		<div style="flex-wrap:wrap; text-align:center"><h2>John Howard Griffin</h2>
+		<span class="tooltiptext">This was 207 pages, took me 3 hours and 25 minutes to read (60.5 pages/hr), I would rate it 5 stars! </span>
+			</div>
+		</div>
+	</div>
+	<div class="book-wide" style="background-color: blue">
+		<div style="flex-wrap: wrap; text-align: center"><h2>The Autobiography of Malcolm X</h2>
+		<div class="band"></div>
+		<div style="flex-wrap:wrap; text-align:center"><h2>Malcolm X</h2>
+		<span class="tooltiptext">This was 512 pages, took me 10 hours and 4 minutes to read (50.8 pages/hr), I would rate it 5 stars! </span>
+			</div>
+		</div>
+	</div>
+	<div class="book-wide" style="background-color:red">
+		<div style="flex-wrap: wrap; text-align: center"><h2>If on a winter's night a traveller</h2>
+		<div class="band"></div>
+		<div style="flex-wrap:wrap; text-align:center"><h2>Andrew Roberts</h2>
+			</div>
+		</div>
+	</div>
+</div>
 </html>
