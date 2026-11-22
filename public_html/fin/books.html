@@ -4,6 +4,15 @@
 {
 box-sizing: border-box;
 }
+.key-container {
+	display: flex;
+	flex-direction: row;
+}
+.key {
+	display: flex;
+	height: 20px;
+	width: 20px;
+}
 .container {
 display: flex;
 flex-wrap: wrap;
@@ -14,29 +23,47 @@ outline-style: solid;
 outline-width: 11px;
 outline-color: #863200;
 }
-.band {
+.band-nonfic {
 display: flex;
-background-color: gold;
-height: 3px;
+background-color: #55552b;
+height: 4px;
 padding: 7px;
 }
-.band-lying {
+.band-fic {
+display: flex;
+background-color: #b62b2b;
+height: 4px;
+padding: 7px;
+}
+.band-fave {
 display: flex;
 background-color: gold;
+height: 4px;
+padding: 7px;
+}
+.band-lyingfic {
+display: flex;
+background-color: #b62b2b;
+width:3px;
+padding:7px;
+}
+.band-lyingnfic {
+display: flex;
+background-color: #55552b;
 width:3px;
 padding:7px;
 }
 .book-lying {
 display:flex;
 flex-direction: row-reverse;
-color: white;
+color: #e5e5e5;
 margin: 3px;
 height: 100px;
 width: 360px;
 }
 .book {
 display: flex;
-color: white;
+color: #e5e5e5;
 margin: 3px;
 height: 400px;
 text-align: center;
@@ -48,7 +75,7 @@ cursor: pointer;
 }
 .book-short {
 display: flex;
-color: white;
+color: #e5e5e5;
 margin: 3px;
 height: 376px;
 text-align: center;
@@ -60,7 +87,7 @@ cursor: pointer;
 }
 .book-wide {
 display: flex;
-color: white;
+color: #e5e5e5;
 margin: 3px;
 height: 387px;
 text-align: center;
@@ -106,233 +133,242 @@ visibility: visible;
 </style>
 </head>
 <body>
+<div><h2>Welcome to my bookcase - I have read 16 books this year</h2></div>
+<div class="key-container">
+	<div class="key" style="background-color:#b20000;"></div>
+	<div><h4>Fiction</h4></div>
+	<div class="key" style="background-color:#004c00;"></div>
+	<div><h4>Non-Fiction</h4></div>
+	<div class="key" style="background-color:gold; width: 70px"></div>
+	<div><h4>I reccomend you read</h4></div>
+</div>
 <div class="container">
-<div class="book-lying" style="background-color:red">
+<div class="book-lying" style="background-color:#b20000">
 <div style="flex-wrap:wrap; text-align: center; writing-mode: vertical-rl; direction:ltr;"><h3>If on a winter's night a traveller</h3>
-<div class="band-lying"></div>
+<div class="band-lyingfic"></div>
 <div style="flex-wrap:wrap; text-align: center; writing-mode: vertical-rl;"><h3>Italo Calvino</h3>
 </div>
 </div>
 </div>
-<div class="book" style="background-color:red">
+<div class="book" style="background-color:#b20000">
 <div style="flex-wrap: wrap; text-align: center"><h3>Voyage of the Dawn Treader</h3>
-<div class="band"></div>
+<div class="band-fic"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>C.S. Lewis</h3>
 <span class="tooltiptext">This was 223 pages, took me 2 hours 10 minutes to read (102.90 pages/hr), I would rate it 3 stars </span>
 </div>
 </div>
 </div>
-<div class="book-short" style="background-color:red">
+<div class="book-short" style="background-color:#b20000">
 <div style="flex-wrap: wrap; text-align: center"><h3>Prince Caspian</h3>
-<div class="band"></div>
+<div class="band-fic"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>C.S. Lewis</h3>
 <span class="tooltiptext">This was 208 pages, took me 1 hour 58 minutes to read (105.1 pages/hr), I would rate it 3.5 stars </span>
 </div>
 </div>
 </div>
-<div class="book" style="background-color:Blue">
+<div class="book" style="background-color:#004c00">
 <div style="flex-wrap: wrap; text-align: center"><h3>Black Like Me</h3>
-<div class="band"></div>
+<div class="band-fave"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>John Howard Griffin</h3>
 <span class="tooltiptext">This was 207 pages, took me 3 hours and 25 minutes to read (60.5 pages/hr), I would rate it 5 stars! </span>
 </div>
 </div>
 </div>
-<div class="book-wide" style="background-color: blue">
+<div class="book-wide" style="background-color: #004c00">
 <div style="flex-wrap: wrap; text-align: center"><h3>The Autobiography of Malcolm X</h3>
-<div class="band"></div>
+<div class="band-fave"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>Malcolm X</h3>
 <span class="tooltiptext">This was 512 pages, took me 10 hours and 4 minutes to read (50.8 pages/hr), I would rate it 5 stars! </span>
 </div>
 </div>
 </div>
-<div class="book" style="background-color:red">
+<div class="book" style="background-color:#b20000">
 <div style="flex-wrap: wrap; text-align: center"><h3>The Horse and His Boy</h3>
-<div class="band"></div>
+<div class="band-fic"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>C.S. Lewis</h3>
 <span class="tooltiptext">This was 237 pages, took me 2 hours 8 minutes to read (110.48 pages/hr), I would rate it 4 stars </span>
 </div>
 </div>
 </div>
-<div class="book-short" style="background-color:Blue">
+<div class="book-short" style="background-color:#004c00">
 <div style="flex-wrap: wrap; text-align: center"><h3>Into Iraq</h3>
-<div class="band"></div>
+<div class="band-nonfic"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>Michael Palin</h3>
 <span class="tooltiptext">This was 172 pages, took me 1 hour 9 minutes to read (148.2 pages/hr), I would rate it 4.5 stars </span>
 </div>
 </div>
 </div>
-<div class="book-wide" style="background-color: blue">
+<div class="book-wide" style="background-color: #004c00">
 <div style="flex-wrap: wrap; text-align: center"><h3>Napoleon the Great</h3>
-<div class="band"></div>
+<div class="band-fave"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>Andrew Roberts</h3>
 <span class="tooltiptext">This was 820 pages, took me 20 hours 24 minutes to read (40.5 pages/hr), I would rate it 4.5 stars </span>
 </div>
 </div>
 </div>
-<div class="book-short" style="background-color: red">
+<div class="book-short" style="background-color: #b20000">
 <div style="flex-wrap: wrap; text-align: center"><h3>The Lion, the Witch, and the Wardrobe</h3>
-<div class="band"></div>
+<div class="band-fic"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>C.S. Lewis</h3>
 <span class="tooltiptext">This was 197 pages, took me 1 hour 10 minutes to read (118.1 pages/hr), I would rate it 4 stars </span>
 </div>
 </div>
 </div>
-<div class="book-short" style="background-color:Blue">
+<div class="book-short" style="background-color:#004c00">
 <div style="flex-wrap: wrap; text-align: center"><h3>Notes of a Native Son</h3>
-<div class="band"></div>
+<div class="band-nonfic"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>James Baldwin</h3>
 <span class="tooltiptext">This was 179 pages, took me 3 hours 32 minutes to read (50.5 pages/hr), I would rate it 5 stars! </span>
 </div>
 </div>
 </div>
-<div class="book" style="background-color:red">
+<div class="book" style="background-color:#b20000">
 <div style="flex-wrap: wrap; text-align: center"><h3>The Adventures of a Three Guinea Watch</h3>
-<div class="band"></div>
+<div class="band-fic"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>Talbot Baines Reed</h3>
 <span class="tooltiptext">This was 216 pages, took me 4 hours 8 minutes to read (52 pages/hr), I would rate it 5 stars! </span>
 </div>
 </div>
 </div>
-<div class="book-wide" style="background-color: blue">
+<div class="book-wide" style="background-color:#004c00">
 <div style="flex-wrap: wrap; text-align: center"><h3>A Child's History of England</h3>
-<div class="band"></div>
+<div class="band-nonfic"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>Charles Dickens</h3>
 <span class="tooltiptext">This was 504 pages, took me 10 hours 33 minutes to read (47.7 pages/hr), I would rate it 4.5 stars </span>
 </div>
 </div>
 </div>
-<div class="book" style="background-color:blue">
+<div class="book" style="background-color:#004c00">
 <div style="flex-wrap: wrap; text-align: center"><h3>Travels Through France and Italy</h3>
-<div class="band"></div>
+<div class="band-nonfic"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>Tobias Smollett</h3>
 <span class="tooltiptext">This was 277 pages, took me 7 hours 9 minutes to read (35.3 pages/hr), I would rate it 3.5 stars</span>
 </div>
 </div>
 </div>
-<div class="book" style="background-color:Blue">
+<div class="book" style="background-color:#004c00">
 <div style="flex-wrap: wrap; text-align: center"><h3>The Uncommer- cial Traveller</h3>
-<div class="band"></div>
+<div class="band-fave"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>Charles Dickens</h3>
 <span class="tooltiptext">This was 371 pages, took me 8 hours 7 minutes to read (45.6 pages/hr), I would rate it 5 stars!</span>
 </div>
 </div>
 </div>
-<div class="book" style="background-color:Blue">
+<div class="book" style="background-color:#004c00">
 <div style="flex-wrap: wrap; text-align: center"><h3>American Notes</h3>
-<div class="band"></div>
+<div class="band-nonfic"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>Charles Dickens</h3>
 <span class="tooltiptext">This was 382 pages, took me 8 hours 10 minutes to read (43.8 pages/hr), I would rate it 4.5 stars</span>
 </div>
 </div>
 </div>
-<div class="book" style="background-color:Blue">
+<div class="book" style="background-color:#004c00">
 <div style="flex-wrap: wrap; text-align: center"><h3>The New Jim Crow</h3>
-<div class="band"></div>
+<div class="band-fave"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>Michelle Alexander</h3>
 <span class="tooltiptext">This was 378 pages, I would rate it 4.5 stars</span>
 </div>
 </div>
 </div>
-<div class="book-wide" style="background-color:Blue">
+<div class="book-wide" style="background-color:#004c00">
 <div style="flex-wrap: wrap; text-align: center"><h4>A Pedestrian Journey Through Russia and Siberian Tartary: from the frontiers of China to the Frozen Seas, and Kamchatka; performed during the years 1820 - 1823</h4>
-<div class="band"></div>
+<div class="band-nonfic"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>Captain John Dundas Cochrane</h3>
 <span class="tooltiptext">This was 215 pages, I would rate it 4 stars</span>
 </div>
 </div>
 </div>
-<div class="book-wide" style="background-color:Blue">
+<div class="book-wide" style="background-color:#004c00">
 <div style="flex-wrap: wrap; text-align: center"><h3>One Summer in America 1927</h3>
-<div class="band"></div>
+<div class="band-nonfic"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>Bill Bryson</h3>
 <span class="tooltiptext">This was 672 pages, I would rate it 3.5 stars</span>
 </div>
 </div>
 </div>
-<div class="book" style="background-color:red">
+<div class="book" style="background-color:#b20000">
 <div style="flex-wrap: wrap; text-align: center"><h3>Hard Times</h3>
-<div class="band"></div>
+<div class="band-fic"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>Charles Dickens</h3>
 <span class="tooltiptext">This was 398 pages, I would rate it 4.5 stars</span>
 </div>
 </div>
 </div>
-<div class="book" style="background-color:Blue">
+<div class="book" style="background-color:#004c00">
 <div style="flex-wrap: wrap; text-align: center"><h3>Redcoats and Rebels: The war for America 1770-81</h3>
-<div class="band"></div>
+<div class="band-nonfic"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>Christopher Hibbert</h3>
 <span class="tooltiptext">This was 388 pages, I would rate it 4.5 stars</span>
 </div>
 </div>
 </div>
-<div class="book" style="background-color:Blue">
+<div class="book" style="background-color:#004c00">
 <div style="flex-wrap: wrap; text-align: center"><h3>Memoirs of a Mercenary</h3>
-<div class="band"></div>
+<div class="band-nonfic"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>Johann Dietz</h3>
 <span class="tooltiptext">This was 221 pages, I would rate it 4.5 stars</span>
 </div>
 </div>
 </div>
-<div class="book" style="background-color:Blue">
+<div class="book" style="background-color:#004c00">
 <div style="flex-wrap: wrap; text-align: center"><h3>We Are Not Numbers: the voices of Gaza's youth</h3>
-<div class="band"></div>
+<div class="band-fave"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>Ahmed Alnaouq</h3>
 <span class="tooltiptext">This was 344 pages, I would rate it 5 stars!</span>
 </div>
 </div>
 </div>
-<div class="book-wide" style="background-color:red">
+<div class="book-wide" style="background-color:#b20000">
 <div style="flex-wrap: wrap; text-align: center"><h3>Twenty Thousand Leagues Under the Sea</h3>
-<div class="band"></div>
+<div class="band-fic"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>Jules Verne</h3>
 <span class="tooltiptext">This was 496 pages, I would rate it 4.5 stars</span>
 </div>
 </div>
 </div>
-<div class="book" style="background-color:red; width:110px">
+<div class="book" style="background-color:#b20000; width:110px">
 <div style="flex-wrap: wrap; text-align: center"><h3>Frankenstein</h3>
-<div class="band"></div>
+<div class="band-fic"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>Mary Shelley</h3>
 <span class="tooltiptext">This was 352 pages, I would rate it 5 stars!</span>
 </div>
 </div>
 </div>
-<div class="book-wide" style="background-color:red">
+<div class="book-wide" style="background-color:#b20000">
 <div style="flex-wrap: wrap; text-align: center"><h3>Oliver Twist & Great Expectations</h3>
-<div class="band"></div>
+<div class="band-fic"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>Charles Dickens</h3>
 <span class="tooltiptext">This was 704 pages, I would rate it 5 stars!</span>
 </div>
 </div>
 </div>
-<div class="book" style="background-color:Blue">
+<div class="book" style="background-color:#004c00">
 <div style="flex-wrap: wrap; text-align: center"><h3>The Wager: a tale of shipwreck, mutiny and murder</h3>
-<div class="band"></div>
+<div class="band-nonfic"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>David Grann</h3>
 <span class="tooltiptext">This was 329 pages, I would rate it 4 stars</span>
 </div>
 </div>
 </div>
-<div class="book" style="background-color:red">
+<div class="book" style="background-color:#b20000">
 <div style="flex-wrap: wrap; text-align: center"><h3>David Copperfield</h3>
-<div class="band"></div>
+<div class="band-fave"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>Charles Dickens</h3>
 <span class="tooltiptext">This was - pages, I would rate it 5 stars!</span>
 </div>
 </div>
 </div>
-<div class="book" style="background-color:red">
+<div class="book" style="background-color:#b20000">
 <div style="flex-wrap: wrap; text-align: center"><h3>Pickwick Papers</h3>
-<div class="band"></div>
+<div class="band-fic"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>Charles Dickens</h3>
 <span class="tooltiptext">This was - pages, I would rate it 4 stars</span>
 </div>
 </div>
 </div>
-<div class="book" style="background-color:red">
+<div class="book" style="background-color:#b20000">
 <div style="flex-wrap: wrap; text-align: center"><h3>Robinson Crusoe</h3>
-<div class="band"></div>
+<div class="band-fave"></div>
 <div style="flex-wrap:wrap; text-align:center"><h3>Daniel Defoe</h3>
 <span class="tooltiptext">This was - pages, I would rate it 5 stars!</span>
 </div>
